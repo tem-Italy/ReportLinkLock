@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>TestReport Link Lock</title>
+</head>
+<link rel="stylesheet" href="../style.css">
+<script type="text/javascript" src="create.js"></script>
+<body>
+
+  <div class="header">
+    <img src="https://www.tem-italy.it/wp-content/uploads/2021/02/Logo-Tem.png" class="logo"/>
+    <h1 class="headertext">TestReport Link Locker</h1>
+  </div>
+
+  <hr class="sep1"/>
+
+  <div class="testreport">
+    <p class="testreporttext">Test Report Link</p>
+    <input type="text" class="testreportfield" placeholder="https://docs.google.com/..."/>
+  </div>
+
+  <div class="password">
+    <p class="passwordtext">Password</p>
+    <input type="text" class="passwordfield"/>
+  </div>
+
+<div class="button">
+  <button onclick="lockLink()">Lock</button>
+</div>
+
+<hr class="sep1"/>
+
+<div class="output">
+  <p class="outputtext">Output Link</p>
+  <input type="text" class="outputfield" readonly value="prova"/>
+  <button class="copybutton" onclick="copyOutput()">Copy</button>
+</div>
+
+</body>
+</html>
