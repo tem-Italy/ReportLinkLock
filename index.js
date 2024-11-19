@@ -21,9 +21,9 @@ function unlockLink() {
     if(inputPassword == decryptedPassword) {
         window.location.href = "https://docs.google.com/spreadsheets/u/0/d/" + linkId + "/edit";
     } else {
-        unlockButton.value = "Wrong Password!";
+        unlockButton.innerHTML = "Wrong Password!";
         setTimeout(() => {
-            unlockButton.value = 'Unlock';
+            unlockButton.innerHTML = 'Unlock';
           }, 1500);
     }
 }
