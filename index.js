@@ -16,7 +16,7 @@ function unlockLink() {
     const password = window.location.hash.split("#")[2];
 
     const decryptedPassword = unhidePassword(password);
-    const unlockButton = document.querySelector('.button');
+    const unlockButton = document.querySelector('.unlockbutton');
 
     if(inputPassword == decryptedPassword) {
         window.location.href = "https://docs.google.com/spreadsheets/u/0/d/" + linkId + "/edit";
