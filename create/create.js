@@ -39,11 +39,11 @@ function extractLinkId(link) {
     const parts = link.split('/');
   
     // Find the index of 'edit' in the parts array
-    const editIndex = parts.indexOf('edit');
+    const editIndex = parts.indexOf('d');
   
     // Check if 'edit' is found and return the previous part (LINK_ID)
     if (editIndex > 0) {
-      return parts[editIndex - 1];
+      return parts[editIndex + 1];
     } else {
       // Return null if 'edit' is not found
       return null;
