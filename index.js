@@ -19,7 +19,7 @@ function unlockLink() {
     const unlockButton = document.querySelector('.unlockbutton');
 
     if(inputPassword == decryptedPassword) {
-        window.location.href = "https://docs.google.com/spreadsheets/u/0/d/" + linkId + "/edit";
+        document.location.href = "https://docs.google.com/spreadsheets/u/0/d/" + linkId + "/edit";
     } else {
         unlockButton.innerHTML = "Wrong Password!";
         setTimeout(() => {
