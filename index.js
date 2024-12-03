@@ -5,6 +5,13 @@ function main() {
     if(!window.location.hash) {
         window.location.replace("./create");
     }
+    var passField = document.querySelector('.passwordfield');
+    passField.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.querySelector('.unlockbutton').click();
+      }
+    });
 }
 
 
