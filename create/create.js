@@ -110,7 +110,7 @@ function onEncrypt() {
   const useRandomSalt = document.querySelector("#salt").checked;
 
   const encrypted = generateFragment(url, password);
-  const output = `https://tem-italy.github.io/report-unlocker/#${encrypted}`;
+  const output = `https://tem-italy.github.io/ReportLinkLock/#${encrypted}`;
 
   document.querySelector("#output").value = output;
   highlight("output");
