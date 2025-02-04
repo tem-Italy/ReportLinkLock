@@ -34,8 +34,10 @@ function main() {
     document.querySelector("#errortext").innerText = "";
 
     // Try to get page data from the URL if possible
-    var linkText = window.location.hash.split('#')[1];
-    var linkPass = window.location.hash.split('#')[2];
+    var currentUrl = window.location.href.replace("%23", "#");
+    
+    const linkText = currentUrl.split('#')[1];
+    const linkPass = currentUrl.split('#')[2];
 
 
     var unlockButton = document.querySelector("#unlockbutton");
