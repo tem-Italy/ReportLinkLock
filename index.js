@@ -58,8 +58,8 @@ function main() {
 
         } else {
           let url = decryptText(linkText);
-          const response = await fetch(url, { mode: 'no-cors' })
-          if(!response.ok) {
+          const test = url.slice(0, 5)
+          if(test != "https") {
             window.location.href = "https://docs.google.com/spreadsheets/d/" + decryptText(url);
           } else {
           window.location.href = url;
