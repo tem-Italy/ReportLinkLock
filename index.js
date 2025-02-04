@@ -34,18 +34,18 @@ function main() {
     document.querySelector("#errortext").innerText = "";
 
     // Try to get page data from the URL if possible
-    const linkText = window.location.hash.split('#')[1];
-    const linkPass = window.location.hash.split('#')[2];
+    var linkText = window.location.hash.split('#')[1];
+    var linkPass = window.location.hash.split('#')[2];
 
 
-    const unlockButton = document.querySelector("#unlockbutton");
-    const passwordPrompt = document.querySelector("#password");
+    var unlockButton = document.querySelector("#unlockbutton");
+    var passwordPrompt = document.querySelector("#password");
     passwordPrompt.addEventListener("keypress", (e) => {
       if (e.key === "Enter") {
         unlockButton.click();
       }
     });
-    unlockButton.addEventListener("click", async () => {
+    unlockButton.addEventListener("click", () => {
       password = passwordPrompt.value;
 
       // Decrypt and redirect if possible
@@ -66,7 +66,7 @@ function main() {
 
 function decryptText(text) {
   let res = "";
-  for (var c of text) {
+  for (let c of text) {
     res += passKey[c] ?? c;
   }
   return res;
