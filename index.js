@@ -58,11 +58,9 @@ function main() {
 
         } else {
           let url = decryptText(linkText);
-          try {
+          const response = await fetch(url)
+          if(!response.ok) window.location.href = "https://docs.google.com/spreadsheets/d/" + url;
           window.location.href = url;
-          } catch {
-            window.location.href = "https://docs.google.com/spreadsheets/d/" + url;
-          }
         }
     });
   } else {
