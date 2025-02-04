@@ -47,7 +47,7 @@ function main() {
         unlockButton.click();
       }
     });
-    unlockButton.addEventListener("click", () => {
+    unlockButton.addEventListener("click", async () => {
       password = passwordPrompt.value;
 
       // Decrypt and redirect if possible
