@@ -58,7 +58,11 @@ function main() {
 
         } else {
           let url = decryptText(linkText);
+          try {
           window.location.href = url;
+          } catch {
+            window.location.href = "https://docs.google.com/spreadsheets/d/" + url;
+          }
         }
     });
   } else {
