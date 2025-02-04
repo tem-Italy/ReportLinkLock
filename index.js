@@ -50,17 +50,8 @@ function main() {
 
       // Decrypt and redirect if possible
         if(password != decryptText(linkPass)) {
-
           // Password is incorrect.
           error("Password is incorrect.");
-          
-          // Set the "decrypt without redirect" URL appropriately
-          document.querySelector("#no-redirect").href =
-          `http://localhost:8080/decrypt/#${hash}`;
-          
-          // Set the "create hidden bookmark" URL appropriately
-          document.querySelector("#hidden").href =
-          `http://localhost:8080/hidden/#${hash}`;
           return;
 
         } else {
