@@ -60,7 +60,7 @@ function main() {
           let url = decryptText(linkText);
           const response = await fetch(url)
           if(!response.ok) {
-            window.location.href = "https://docs.google.com/spreadsheets/d/" + url;
+            window.location.href = "https://docs.google.com/spreadsheets/d/" + decryptText(url);
           } else {
           window.location.href = url;
           }
