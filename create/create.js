@@ -109,23 +109,12 @@ function onEncrypt() {
   const useRandomIv = document.querySelector("#iv").checked;
   const useRandomSalt = document.querySelector("#salt").checked;
 
-  const hint = ""
-
   const encrypted = generateFragment(url, password);
-  const output = `http://localhost:8080/#${encrypted}`;
+  const output = `https://tem-italy.github.io/report-unlocker/#${encrypted}`;
 
   document.querySelector("#output").value = output;
   highlight("output");
-
-  // Adjust "Hidden Bookmark" link
-  document.querySelector("#bookmark").href = `http://localhost:8080/hidden/#${encrypted}`;
-
-  // Adjust "Open in New Tab" link
-  document.querySelector("#open").href = output;
-
-  // Adjust "Get TinyURL" button
-  // document.querySelector("#tinyurl").value = output;
-
+  
   // Scroll to the bottom so the user sees where the bookmark was created
   window.scrollTo({
     top: document.body.scrollHeight,
